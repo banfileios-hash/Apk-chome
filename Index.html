@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- TAB BAR -->
+    <div class="tab-bar" id="tabBar">
+        <div class="tabs-container" id="tabsContainer">
+            <div class="tab active" data-tab-id="1">
+                <img class="tab-favicon" src="https://www.google.com/favicon.ico" alt="">
+                <span class="tab-title">New Tab</span>
+                <button class="tab-close">✕</button>
+            </div>
+        </div>
+        <button class="new-tab-btn" id="newTabBtn">+</button>
+        <div class="window-controls">
+            <button class="window-btn minimize">─</button>
+            <button class="window-btn maximize">□</button>
+            <button class="window-btn close">✕</button>
+        </div>
+    </div>
+
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+        <div class="nav-buttons">
+            <button class="nav-btn" id="backBtn" title="Quay lại">←</button>
+            <button class="nav-btn" id="forwardBtn" title="Tiến">→</button>
+            <button class="nav-btn" id="reloadBtn" title="Tải lại">⟳</button>
+            <button class="nav-btn" id="homeBtn" title="Trang chủ">⌂</button>
+        </div>
+        <div class="address-bar">
+            <span class="security-icon">🔒</span>
+            <input type="text" id="addressInput" placeholder="Tìm kiếm hoặc nhập URL" value="">
+            <button class="star-btn" title="Đánh dấu">☆</button>
+        </div>
+        <div class="toolbar-right">
+            <button class="toolbar-btn" id="extensionsBtn">🧩</button>
+            <button class="toolbar-btn" id="profileBtn">👤</button>
+            <button class="toolbar-btn" id="menuBtn">⋮</button>
+        </div>
+    </div>
+
+    <!-- MENU DROPDOWN -->
+    <div class="menu-dropdown" id="menuDropdown">
+        <div class="menu-item">New tab <span>Ctrl+T</span></div>
+        <div class="menu-item">New window <span>Ctrl+N</span></div>
+        <div class="menu-divider"></div>
+        <div class="menu-item">History</div>
+        <div class="menu-item">Downloads <span>Ctrl+J</span></div>
+        <div class="menu-item">Bookmarks <span>Ctrl+Shift+O</span></div>
+        <div class="menu-divider"></div>
+        <div class="menu-item">Print <span>Ctrl+P</span></div>
+        <div class="menu-item">Cast</div>
+        <div class="menu-item">Find <span>Ctrl+F</span></div>
+        <div class="menu-divider"></div>
+        <div class="menu-item">Settings</div>
+        <div class="menu-item">Help</div>
+        <div class="menu-item">Exit</div>
+    </div>
+
+    <!-- NEW TAB PAGE -->
+    <div class="new-tab-page" id="newTabPage">
+        <div class="google-logo">
+            <span class="g-blue">G</span>
+            <span class="g-red">o</span>
+            <span class="g-yellow">o</span>
+            <span class="g-blue">g</span>
+            <span class="g-green">l</span>
+            <span class="g-red">e</span>
+        </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm trên Google hoặc nhập URL">
+            <button class="search-btn">🔍</button>
+        </div>
+        <div class="shortcuts" id="shortcuts">
+            <div class="shortcut">
+                <div class="shortcut-icon" style="background:#4285F4">G</div>
+                <span>Google</span>
+            </div>
+            <div class="shortcut">
+                <div class="shortcut-icon" style="background:#FF0000">Y</div>
+                <span>YouTube</span>
+            </div>
+            <div class="shortcut">
+                <div class="shortcut-icon" style="background:#1877F2">F</div>
+                <span>Facebook</span>
+            </div>
+            <div class="shortcut">
+                <div class="shortcut-icon" style="background:#1DA1F2">T</div>
+                <span>Twitter</span>
+            </div>
+            <div class="shortcut">
+                <div class="shortcut-icon" style="background:#E4405F">I</div>
+                <span>Instagram</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- WEBVIEW -->
+    <div class="webview-container" id="webviewContainer" style="display:none;">
+        <iframe id="webview" src="about:blank"></iframe>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
